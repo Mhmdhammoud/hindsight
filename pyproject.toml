@@ -1,0 +1,16 @@
+[project]
+name = "hindsight"
+version = "0.2.0"
+description = "Per-client meeting memory: Granola transcripts -> verified facts, reconciled brief, semantic search."
+requires-python = ">=3.11"
+dependencies = ["mcp>=2", "numpy", "requests", "rank_bm25"]
+
+[project.scripts]
+hindsight = "hindsight.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
